@@ -11,14 +11,6 @@ public class Capacitor24hTimePlugin extends Plugin {
 
     private Capacitor24hTime implementation = new Capacitor24hTime();
 
-    @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
-    }
 
         @PluginMethod
             public void is24h(PluginCall call) {
