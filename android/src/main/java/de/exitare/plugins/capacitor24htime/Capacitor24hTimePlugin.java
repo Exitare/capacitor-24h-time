@@ -19,4 +19,12 @@ public class Capacitor24hTimePlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+        @PluginMethod
+            public void is24h(PluginCall call) {
+                Boolean is24h = implementation.is24h(getContext());
+                JSObject ret = new JSObject();
+                ret.put("is24h", is24h);
+                call.resolve(ret);
+            }
 }

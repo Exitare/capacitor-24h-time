@@ -10,7 +10,8 @@ public class Capacitor24hTimePlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "Capacitor24hTimePlugin"
     public let jsName = "Capacitor24hTime"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "is24h", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = Capacitor24hTime()
 
@@ -20,4 +21,10 @@ public class Capacitor24hTimePlugin: CAPPlugin, CAPBridgedPlugin {
             "value": implementation.echo(value)
         ])
     }
+
+     @objc func is24h(_ call: CAPPluginCall) {
+             call.resolve([
+                "is24h": implementation.is24h()
+            ])
+           }
 }
