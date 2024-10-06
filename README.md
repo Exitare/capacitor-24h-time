@@ -9,6 +9,10 @@ npm install capacitor-24h-time
 npx cap sync
 ```
 
+
+## Web Api
+As of today, the web api will always return false.
+
 ## API
 
 <docgen-index>
@@ -31,3 +35,4 @@ is24h() => Promise<{ is24h: boolean; }>
 --------------------
 
 </docgen-api>
+
