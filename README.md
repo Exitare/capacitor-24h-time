@@ -9,30 +9,17 @@ npm install capacitor-24h-time
 npx cap sync
 ```
 
+## Usage
+```typescript
+import {DeviceTimeUtils} from "capacitor-24h-time";
+
+
+// boolean time format. True if 24h, false if 12h
+const is24H = await DeviceTimeUtils.is24HourFormat();
+```
+
 
 ## Web Api
 As of today, the web api will always return false.
 
-## API
-
-<docgen-index>
-
-* [`is24h()`](#is24h)
-
-</docgen-index>
-
-<docgen-api>
-<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### is24h()
-
-```typescript
-is24h() => Promise<{ is24h: boolean; }>
-```
-
-**Returns:** <code>Promise&lt;{ is24h: boolean; }&gt;</code>
-
---------------------
-
-</docgen-api>
 
